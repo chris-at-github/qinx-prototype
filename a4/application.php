@@ -31,6 +31,11 @@ class Application {
 			$sRealPagepath = $sPublicPath . $sPage . DIRECTORY_SEPARATOR . 'index.php';
 		}
 
+		// Replace double slashes
+		if($sRealPagepath !== null) {
+			$sRealPagepath = str_replace(['//', '\\\\'], ['/', '\\'], $sRealPagepath);
+		}
+
 		return $sRealPagepath;
 	}
 }
