@@ -8,7 +8,12 @@ class Application {
 		$sPage					= trim($sPage, '/');
 		$sRealPagepath 	= $this->getRealPagepath($sPage);
 
-		echo $sRealPagepath;
+
+		$sTest = 'abc';
+
+		include($sRealPagepath);
+
+		echo $sTest;
 	}
 
 	/**
