@@ -24,7 +24,7 @@ class Application {
 	 */
 	protected function getRealPagepath($sPage) {
 		$sRealPagepath 	= null;
-		$sPublicPath		= _A4_PATH . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR;
+		$sPublicPath		= A4_PATH . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR;
 
 		// get file directly by filename '/abc/def.php'
 		if(is_file($sPublicPath . $sPage . '.php') === true) {
