@@ -7,5 +7,5 @@
 
     # Handle Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^(.*)$ index.php?page=$1
+    RewriteRule ^(.*)$ a4.php?page=$1
 </IfModule>
