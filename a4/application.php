@@ -20,9 +20,15 @@ class Application {
 	 * Sets the page renderer
 	 *
 	 * @param Renderer\Renderer $sRenderer
+	 * @return \A4\Application
 	 */
 	public function setPageRenderer(\A4\Renderer\Renderer $sRenderer) {
 		$this->sPageRenderer = $sRenderer;
+		return $this;
+	}
+
+	public function test($test) {
+		$this->test = $test;
 	}
 
 	/**
@@ -34,8 +40,18 @@ class Application {
 		$sPage					= trim($sPage, '/');
 		$sRealPagepath 	= $this->getRealPagepath($sPage);
 
-		$oPageRenderer = new $this->sPageRenderer();
-		$oPageRenderer->render();
+		$abc = 'edf';
+		$app = $this;
+
+		ob_start();
+		include($sRealPagepath);
+		$output = ob_get_contents();
+		ob_end_clean();
+
+		echo $this->test;
+
+//		$oPageRenderer = new $this->sPageRenderer();
+//		$oPageRenderer->render();
 	}
 
 	/**

@@ -1,2 +1,3 @@
 Hello World
-<?php $sTest = 'edf'; ?>
+<?php $abc = 'xyz'; ?>
+<?php $app->test('Hello Test'); ?>
