@@ -1,16 +1,41 @@
 <?php
 namespace A4;
 
+/**
+ * Class Application
+ * Basic class of a4 project
+ *
+ * @package A4
+ */
 class Application {
-	public function __construct() {
+
+	/**
+	 * Basis page view renderer
+	 *
+	 * @var \A4\Renderer\Renderer $sPageView
+	 */
+	protected $sPageRenderer = \A4\Renderer\HtmlRenderer::class;
+
+	/**
+	 * Sets the page renderer
+	 *
+	 * @param Renderer\Renderer $sRenderer
+	 */
+	public function setPageRenderer(\A4\Renderer\Renderer $sRenderer) {
+		$this->sPageRenderer = $sRenderer;
 	}
 
+	/**
+	 * Execute the given page path against the page renderer
+	 *
+	 * @param string $sPage
+	 */
 	public function execute($sPage) {
 		$sPage					= trim($sPage, '/');
 		$sRealPagepath 	= $this->getRealPagepath($sPage);
 
-		$oPageView = new \A4\View\HtmlView();
-		$oPageView->render();
+		$oPageRenderer = new $this->sPageRenderer();
+		$oPageRenderer->render();
 	}
 
 	/**

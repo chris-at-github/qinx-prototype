@@ -1,7 +1,7 @@
 <?php
-namespace A4\View;
+namespace A4\Renderer;
 
-interface ViewInterface {
+interface RendererInterface {
 
 	/**
 	 * Load the given page path and output the result to the browser

@@ -1,7 +1,7 @@
 <?php
-namespace A4\View;
+namespace A4\Renderer;
 
-class HtmlView extends View implements ViewInterface {
+class HtmlRenderer extends Renderer implements RendererInterface {
 
 	/**
 	 * Output and render the given page as HTML
