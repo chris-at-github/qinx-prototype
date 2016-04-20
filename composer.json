@@ -1,13 +1,9 @@
 {
-	"config": {
-		"vendor-dir": "Vendor"
-	},
-
 	"require": {
 		"monolog/monolog": "1.0.*"
 	},
 
 	"autoload": {
-		"psr-4": {"A4\\": "A4/"}
+		"psr-4": {"A4\\": "a4/"}
 	}
 }
