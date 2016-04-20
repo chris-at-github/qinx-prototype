@@ -1,4 +1,5 @@
 <?php
+namespace A4;
 
 class Application {
 	public function __construct() {
@@ -7,13 +8,6 @@ class Application {
 	public function execute($sPage) {
 		$sPage					= trim($sPage, '/');
 		$sRealPagepath 	= $this->getRealPagepath($sPage);
-
-
-		$sTest = 'abc';
-
-		include($sRealPagepath);
-
-		echo $sTest;
 	}
 
 	/**
