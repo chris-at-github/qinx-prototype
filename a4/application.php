@@ -8,6 +8,9 @@ class Application {
 	public function execute($sPage) {
 		$sPage					= trim($sPage, '/');
 		$sRealPagepath 	= $this->getRealPagepath($sPage);
+
+		$oPageView = new \A4\View\HtmlView();
+		$oPageView->render();
 	}
 
 	/**
