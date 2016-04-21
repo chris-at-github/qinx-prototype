@@ -1,5 +1,7 @@
 <?php $partial->render('Header'); ?>
 
-Hello World
+	<div id="map" class="placeholder">
+		<div class="placeholder--title">Mp</div>
+	</div>
 
 <?php $partial->render('Footer'); ?>

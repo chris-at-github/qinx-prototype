@@ -1,3 +1,20 @@
-* {
-	border: 1px solid blue;
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,600);
+body {
+	font-family: 'Titillium Web', sans-serif;
+}
+// ---------------------------------------------------------------------------------------------------------------------
+// Placeholder
+.placeholder {
+	& {
+		display: flex;
+		align-items: center;
+		width: 250px;
+		height: 250px;
+		background: #eee;
+	}
+
+	.placeholder--title {
+		flex: 1;
+		text-align: center;
+	}
 }
