@@ -38,8 +38,8 @@ class Application {
 
 		$sPageOutput = $this->getOutputBuffer($sRealPagepath);
 
-//		$oPageRenderer = new $this->sPageRenderer();
-//		$oPageRenderer->render();
+		$oPageRenderer = new $this->sPageRenderer($sPageOutput);
+		$oPageRenderer->render();
 	}
 
 	/**

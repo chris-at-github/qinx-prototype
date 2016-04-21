@@ -64,6 +64,8 @@ class Renderer {
 	 * @param \A4\Application|null $oApplication
 	 */
 	public function __construct($sSource = null, \A4\Application $oApplication = null) {
-
+		if($sSource !== null) {
+			$this->setSource($sSource);
+		}
 	}
 }

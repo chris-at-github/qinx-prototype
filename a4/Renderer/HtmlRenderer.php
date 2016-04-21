@@ -1,6 +1,12 @@
 <?php
 namespace A4\Renderer;
 
+/**
+ * Class HtmlRenderer
+ * Render the page output as HTML
+ *
+ * @package A4\Renderer
+ */
 class HtmlRenderer extends Renderer implements RendererInterface {
 
 	/**
@@ -9,6 +15,6 @@ class HtmlRenderer extends Renderer implements RendererInterface {
 	 * @return void
 	 */
 	public function render() {
-		echo '\A4\View\Html';
+		echo $this->sSource;
 	}
 }
