@@ -14,10 +14,10 @@ var autoprefixer 	= require('autoprefixer');
 // paths for watching
 var folders = {
 	source: {
-		scss: ['./Resources/Private/Scss/*.scss']
+		scss: ['./source/scss/*.scss']
 	},
 	target: {
-		css: './Resources/Public/Css/'
+		css: './public/css/'
 	}
 };
 
