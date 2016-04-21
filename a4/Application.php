@@ -49,7 +49,8 @@ class Application {
 	 * @return string
 	 */
 	public function getOutputBuffer($sPage) {
-		$oApp = $this; // oApp is avialable in included page
+		$app 			= $this; // app is avialable in included page
+		$partial	= new \A4\Partial();
 
 		// Buffer the output, include target page
 		ob_start();
