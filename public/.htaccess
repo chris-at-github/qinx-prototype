@@ -4,8 +4,10 @@
     </IfModule>
 
     RewriteEngine On
+    RewriteBase /
 
     # Handle Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^(.*)$ a4.php?page=$1
+    RewriteCond %{REQUEST_URI} !^(.*).(css|js|ico)$
+    RewriteRule ^(.*)$ /a4.php?page=$1 [L]
 </IfModule>
