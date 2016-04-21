@@ -1,0 +1,32 @@
+{
+  "name": "a4",
+  "version": "0.0.1",
+  "description": "A4 prototype",
+  "main": ".",
+  "dependencies": {
+    "autoprefixer": "^6.3.6",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.1.0",
+    "gulp-sass": "^2.3.0",
+    "gulp-sourcemaps": "^1.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chris-at-github/qinx-prototype.git"
+  },
+  "keywords": [
+    "A4"
+  ],
+  "author": "Christian Pschorr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chris-at-github/qinx-prototype/issues"
+  },
+  "homepage": "https://github.com/chris-at-github/qinx-prototype#readme"
+}
