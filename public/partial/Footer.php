@@ -1,1 +1,4 @@
-\A4\Partial\Footer
+<!-- /page -->
+
+</body>
+</html>
