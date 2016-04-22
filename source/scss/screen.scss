@@ -8,22 +8,18 @@
 @import 'grid';
 @import 'form';
 
-body {
-	font-family: 'Titillium Web', sans-serif;
-}
 // ---------------------------------------------------------------------------------------------------------------------
 // Placeholder
 .placeholder {
 	& {
 		display: flex;
 		align-items: center;
-		width: 250px;
-		height: 250px;
-		background: #eee;
+		background: $grey-darker;
 	}
 
 	.placeholder--title {
 		flex: 1;
 		text-align: center;
+		color: $grey-lighter;
 	}
 }
