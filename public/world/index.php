@@ -23,4 +23,34 @@
 	</div>
 </div>
 
+<div class="container">
+	<div class="container--header">World</div>
+
+	<div class="row">
+		<div class="col-sm-4">
+			<div class="placeholder">
+				<div class="placeholder--title">Units</div>
+			</div>
+		</div>
+
+		<div class="col-sm-4">
+			<div class="placeholder">
+				<div class="placeholder--title">Trade</div>
+			</div>
+		</div>
+
+		<div class="col-sm-4">
+			<div class="placeholder">
+				<div class="placeholder--title">Diplomacy</div>
+			</div>
+		</div>
+
+		<div class="col-sm-4">
+			<div class="placeholder">
+				<div class="placeholder--title">Players</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <?php $partial->render('Footer'); ?>

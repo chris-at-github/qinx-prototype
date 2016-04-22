@@ -19,6 +19,29 @@
 </head>
 <body>
 
+	<div id="header">
+		<div class="row">
+			<div class="col-sm-10">
+				<nav class="navigation" id="navigation-main">
+					<ul class="clearfix">
+						<li class="active">
+							<a href="#world">World</a>
+						</li>
+						<li>
+							<a href="#colony">Colony</a>
+						</li>
+						<li>
+							<a href="#research">Research</a>
+						</li>
+						<li>
+							<a href="#diplomacy">Diplomacy</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+
 <div class="container">
 	<div class="container--header">Header</div>
 
