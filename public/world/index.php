@@ -1,5 +1,8 @@
 <?php $partial->render('Header'); ?>
 
+<div class="container">
+	<div class="container--header">World Map</div>
+
 	<div class="row world-map">
 		<div class="col-sm-10">
 			<div id="world-map--container" class="placeholder">
@@ -18,6 +21,6 @@
 			</a>
 		</div>
 	</div>
-
+</div>
 
 <?php $partial->render('Footer'); ?>
