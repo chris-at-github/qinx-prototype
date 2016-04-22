@@ -19,6 +19,7 @@ body {
 .placeholder {
 	& {
 		display: flex;
+		min-height: 40px;
 		align-items: center;
 		background: $grey-darker;
 	}
