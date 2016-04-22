@@ -29,6 +29,10 @@ body {
 		text-align: center;
 		color: $grey-lighter;
 	}
+
+	& + .placeholder {
+		margin: 10px 0 0 0;
+	}
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -39,12 +43,6 @@ body {
 }
 
 .world-map--tile {
-	& {
-		width: 100px;
-		height: 100px;
-	}
-
-	& + .world-map--tile {
-		margin: 10px 0 0 0;
-	}
+	width: 100px;
+	height: 100px;
 }
