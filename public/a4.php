@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(E_ALL ^ E_STRICT);
+
 define('A4_PATH', realpath(__DIR__ . '/..'));
 define('A4_VERSION', '0.0.1');
 

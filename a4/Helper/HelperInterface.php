@@ -1,5 +1,5 @@
 <?php
-namespace A4\ViewHelper;
+namespace A4\Helper;
 
 interface HelperInterface {
 }

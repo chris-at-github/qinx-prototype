@@ -62,7 +62,7 @@ class Application {
 		$sPage = trim($sPage, '/');
 		$sRealPagepath = $this->getRealPagepath($sPage);
 
-		$this->setActivePage($sRealPagepath);
+		$this->setActivePage(\A4\Helper\UriHelper::get($sPage));
 
 		$sPageOutput = $this->getOutputBuffer($sRealPagepath);
 
