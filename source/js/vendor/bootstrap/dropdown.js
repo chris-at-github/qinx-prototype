@@ -109,7 +109,7 @@
 		}
 
 		var desc = ' li:not(.disabled):visible a'
-		var $items = $parent.find('.dropdown-menu' + desc)
+		var $items = $parent.find('.dropdown--container' + desc)
 
 		if(! $items.length) return
 
@@ -158,6 +158,6 @@
 		})
 		.on('click.bs.dropdown.data-api', toggle, Dropdown.prototype.toggle)
 		.on('keydown.bs.dropdown.data-api', toggle, Dropdown.prototype.keydown)
-		.on('keydown.bs.dropdown.data-api', '.dropdown-menu', Dropdown.prototype.keydown)
+		.on('keydown.bs.dropdown.data-api', '.dropdown--container', Dropdown.prototype.keydown)
 
 }(jQuery);
