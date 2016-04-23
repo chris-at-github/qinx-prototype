@@ -14,7 +14,7 @@
 
 	<div class="remodal modal modal-large" data-remodal-id="setting">
 		<div class="modal--header">
-			<button data-remodal-action="close" class="remodal-close"></button>
+			<button data-remodal-action="close" class="modal--close"></button>
 			<header class="modal--title">Setting</header>
 		</div>
 		<div class="modal--body">

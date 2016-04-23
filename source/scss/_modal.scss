@@ -33,6 +33,7 @@ html.remodal-is-locked {
 	overflow: auto;
 	text-align: center;
 	-webkit-overflow-scrolling: touch;
+	padding: 0 10px;
 }
 
 .remodal-wrapper:after {
@@ -132,7 +133,7 @@ html.remodal-is-locked {
 }
 
 .remodal-close:before {
-	content: '\EA21';
+	content: '\EA01';
 	@include font-icon();
 	transition-duration: 0s;
 }

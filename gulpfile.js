@@ -14,6 +14,10 @@ var autoprefixer 	= require('autoprefixer');
 // include js plugins
 var webpack	= require('webpack-stream');
 
+var	iconfont = require('gulp-iconfont'),
+	svgmin = require('gulp-svgmin'),
+	consolidate = require('gulp-consolidate');
+
 // paths for watching
 var folders = {
 	source: {
@@ -43,6 +47,31 @@ gulp.task('webpack', function() {
 		.pipe(plumber())
 		.pipe(webpack(require('./webpack.config.js')))
 		.pipe(gulp.dest(folders.target.js));
+});
+
+// Create icon font.
+gulp.task('iconfont', function() {
+	var runtime = Math.round(Date.now() / 1000);
+
+	return gulp.src(['./source/fonts/*.svg'])
+		.pipe(plumber())
+		.pipe(iconfont({
+			fontName: 'Icons',
+			prependUnicode: true,
+			normalize: true,
+			formats: ['ttf', 'eot', 'woff']
+		}))
+		.on('glyphs', function(codepoints, options) {
+			gulp.src('./source/fonts/_icons.scss')
+				.pipe(consolidate('lodash', {
+					glyphs: codepoints,
+					fontName: 'icons',
+					fontPath: '../fonts/',
+					className: 'icon'
+				}))
+				.pipe(gulp.dest('./source/scss/'))
+		})
+		.pipe(gulp.dest('./public/fonts/'));
 });
 
 // Rerun the task when a file changes

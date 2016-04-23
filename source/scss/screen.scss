@@ -3,6 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,600);
 @import 'variables';
 @import 'mixins';
+@import 'icons';
 @import 'normalize';
 @import 'scaffolding';
 @import 'navigation';
@@ -111,7 +112,6 @@ body {
 // Modal
 .modal {
 	& {
-		margin: 0 10px;
 		background: $white;
 		text-align: left;
 	}
@@ -120,8 +120,32 @@ body {
 		max-width: 800px;
 	}
 
+	.modal--close {
+		& {
+			position: absolute;
+			top: 0; right: 0;
+			width: 45px;
+			height: 45px;
+			line-height: 45px;
+			border: 0;
+			background: transparent;
+			color: $grey-light;
+		}
+
+		&:before {
+			content: '\EA01';
+			@include font-icon();
+			transition-duration: 0s;
+		}
+
+		&:hover {
+			background: lighten($grey-darker, 5);
+		}
+	}
+
 	.modal--header {
-		padding: 10px;
+		padding: 0 10px;
+		line-height: 45px;
 		background: $grey-darker;
 	}
 
