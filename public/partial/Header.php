@@ -44,7 +44,9 @@
 				<div class="dropdown" id="commander">
 					<div class="dropdown--trigger" data-toggle="dropdown">Commander</div>
 					<div class="dropdown--container">
-						LALALLAALLALA
+						<div class="placeholder">
+							<div class="placeholder--title">Commander</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -55,12 +57,6 @@
 	<div class="container--header">Header</div>
 
 	<div class="row">
-		<div class="col-sm-4">
-			<div class="placeholder">
-				<div class="placeholder--title">Commander</div>
-			</div>
-		</div>
-
 		<div class="col-sm-4">
 			<div class="placeholder">
 				<div class="placeholder--title">Research</div>

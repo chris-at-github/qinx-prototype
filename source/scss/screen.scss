@@ -122,10 +122,30 @@ body {
 // Commander
 #commander {
 	.dropdown--trigger {
-		display: block;
+		display: inline-block;
 		line-height: 45px;
 		padding: 0 20px;
 		color: $grey-light;
 		text-transform: uppercase;
+	}
+
+	.dropdown--container {
+		top: 45px;
+		left: auto; right: 0;
+		min-width: 450px;
+		padding: 10px;
+		background: $white;
+	}
+
+	&.on {
+		.dropdown--trigger {
+			background: $white;
+			color: $font-default-color;
+			font-weight: 600;
+		}
+	}
+
+	.placeholder {
+		min-height: 200px;
 	}
 }
