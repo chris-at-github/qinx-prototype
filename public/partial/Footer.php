@@ -12,6 +12,22 @@
 	</div>
 </div>
 
+	<div class="remodal modal modal-large" data-remodal-id="setting">
+		<div class="modal--header">
+			<button data-remodal-action="close" class="remodal-close"></button>
+			<header class="modal--title">Setting</header>
+		</div>
+		<div class="modal--body">
+			<div class="placeholder">
+				<div class="placeholder--title">Game Setting</div>
+			</div>
+
+			<div class="placeholder">
+				<div class="placeholder--title">User Setting</div>
+			</div>
+		</div>
+	</div>
+
 	<script type="text/javascript" src="/js/a4.package.js"></script>
 
 </body>

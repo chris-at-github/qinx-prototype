@@ -9,6 +9,7 @@
 @import 'grid';
 @import 'form';
 @import 'bootstrap';
+@import 'modal';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // HTML
@@ -103,6 +104,34 @@ body {
 
 	& + .placeholder {
 		margin: 10px 0 0 0;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Modal
+.modal {
+	& {
+		margin: 0 10px;
+		background: $white;
+		text-align: left;
+	}
+
+	&.modal-large {
+		max-width: 800px;
+	}
+
+	.modal--header {
+		padding: 10px;
+		background: $grey-darker;
+	}
+
+	.modal--title {
+		color: $grey-light;
+		text-transform: uppercase;
+	}
+
+	.modal--body {
+		padding: 10px;
 	}
 }
 

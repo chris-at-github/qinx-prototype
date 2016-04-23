@@ -52,7 +52,7 @@
 							</div>
 						</li>
 						<li>
-							<div class="navigation--item">Settings</div>
+							<div class="navigation--item" data-remodal-target="setting">Setting</div>
 						</li>
 					</ul>
 				</nav>

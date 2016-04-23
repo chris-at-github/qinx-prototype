@@ -1,0 +1,186 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Animation
+html.remodal-is-locked {
+	overflow: hidden;
+	touch-action: none;
+}
+
+/* Anti FOUC */
+.remodal, [data-remodal-id] {
+	display: none;
+}
+
+/* Necessary styles of the overlay */
+.remodal-overlay {
+	position: fixed;
+	z-index: 9999;
+	top: -5000px;
+	right: -5000px;
+	bottom: -5000px;
+	left: -5000px;
+	display: none;
+}
+
+/* Necessary styles of the wrapper */
+.remodal-wrapper {
+	position: fixed;
+	z-index: 10000;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: none;
+	overflow: auto;
+	text-align: center;
+	-webkit-overflow-scrolling: touch;
+}
+
+.remodal-wrapper:after {
+	display: inline-block;
+	height: 100%;
+	margin-left: -0.05em;
+	content: '';
+}
+
+/* Fix iPad, iPhone glitches */
+.remodal-overlay,
+.remodal-wrapper {
+	backface-visibility: hidden;
+}
+
+/* Necessary styles of the modal dialog */
+.remodal {
+	position: relative;
+	outline: none;
+	text-size-adjust: 100%;
+}
+
+.remodal-is-initialized {
+	display: inline-block;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Overlay
+.remodal-overlay {
+	background: $grey;
+	opacity: 0.35;
+}
+
+.remodal-overlay.remodal-is-opening,
+.remodal-overlay.remodal-is-closing {
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+}
+
+.remodal-overlay.remodal-is-opening {
+	animation-name: remodal-overlay-opening-keyframes;
+}
+
+.remodal-overlay.remodal-is-closing {
+	animation-name: remodal-overlay-closing-keyframes;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Modal
+.remodal {
+	box-sizing: border-box;
+	width: 100%;
+	transform: translate3d(0, 0, 0);
+}
+
+.remodal.remodal-is-opening,
+.remodal.remodal-is-closing {
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+}
+
+.remodal.remodal-is-opening {
+	animation-name: remodal-opening-keyframes;
+}
+
+.remodal.remodal-is-closing {
+	animation-name: remodal-closing-keyframes;
+}
+
+/* Vertical align of the modal dialog */
+.remodal,
+.remodal-wrapper:after {
+	vertical-align: middle;
+}
+
+/* Close button */
+.remodal-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	border: 0;
+	background: transparent;
+	font-size: 25px;
+	color: $grey;
+}
+
+.remodal-close:hover,
+.remodal-close:focus {
+	background: transparent;
+}
+
+.remodal-close:before {
+	content: '\EA21';
+	@include font-icon();
+	transition-duration: 0s;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Animation
+@keyframes remodal-opening-keyframes {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 0.9;
+	}
+}
+
+@keyframes remodal-closing-keyframes {
+	from {
+		opacity: 0.9;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes remodal-overlay-opening-keyframes {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 0.9;
+	}
+}
+
+@keyframes remodal-overlay-closing-keyframes {
+	from {
+		opacity: 0.9;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Internet Explorer
+.lt-ie9 .remodal-overlay {
+	background: $grey;
+}
+
+.lt-ie9 .remodal {
+	width: 700px;
+}
