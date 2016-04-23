@@ -12,5 +12,7 @@
 	</div>
 </div>
 
+	<script type="text/javascript" src="/js/a4.package.js"></script>
+
 </body>
 </html>
