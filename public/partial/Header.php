@@ -19,6 +19,8 @@
 </head>
 <body>
 
+<?php var_dump($app); ?>
+
 	<div id="header">
 		<div class="row">
 			<div class="col-sm-10">

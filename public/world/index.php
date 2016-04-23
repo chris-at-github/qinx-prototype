@@ -10,7 +10,7 @@
 			</div>
 		</div>
 		<div class="col-sm-6">
-			<a href="<?php echo \A4\ViewHelper\UriViewHelper::get('colony'); ?>" class="placeholder world-map--tile">
+			<a href="<?php echo \A4\Helper\UriHelper::get('colony'); ?>" class="placeholder world-map--tile">
 				<span class="placeholder--title">Colony #01</span>
 			</a>
 			<a href="#" class="placeholder world-map--tile">

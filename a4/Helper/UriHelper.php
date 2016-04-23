@@ -1,7 +1,7 @@
 <?php
-namespace A4\ViewHelper;
+namespace A4\Helper;
 
-class UriViewHelper extends ViewHelper {
+class UriHelper extends Helper {
 
 	/**
 	 * Return a clean url for a given target
@@ -10,7 +10,7 @@ class UriViewHelper extends ViewHelper {
 	 * @return string
 	 */
 	public static function get($target) {
-		$target = '/' . $target . '/';
+		$target = '/' . trim($target) . '/';
 		$target = str_replace(['//', '\\\\'], ['/', '\\'], $target);
 
 		return $target;
