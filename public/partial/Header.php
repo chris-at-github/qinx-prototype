@@ -59,15 +59,3 @@
 			</div>
 		</div>
 	</div>
-
-<div class="container">
-	<div class="container--header">Header</div>
-
-	<div class="row">
-		<div class="col-sm-4">
-			<div class="placeholder">
-				<div class="placeholder--title">Settings</div>
-			</div>
-		</div>
-	</div>
-</div>
