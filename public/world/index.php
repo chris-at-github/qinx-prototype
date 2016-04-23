@@ -41,12 +41,6 @@
 
 		<div class="col-sm-4">
 			<div class="placeholder">
-				<div class="placeholder--title">Diplomacy</div>
-			</div>
-		</div>
-
-		<div class="col-sm-4">
-			<div class="placeholder">
 				<div class="placeholder--title">Players</div>
 			</div>
 		</div>

@@ -59,12 +59,6 @@
 	<div class="row">
 		<div class="col-sm-4">
 			<div class="placeholder">
-				<div class="placeholder--title">Research</div>
-			</div>
-		</div>
-
-		<div class="col-sm-4">
-			<div class="placeholder">
 				<div class="placeholder--title">Settings</div>
 			</div>
 		</div>
