@@ -41,12 +41,7 @@ gulp.task('scss', function() {
 gulp.task('webpack', function() {
 	return gulp.src('./source/js/a4.js')
 		.pipe(plumber())
-		.pipe(webpack({
-			output:  {
-				filename: 'a4.package.js',
-			},
-			devtool: 'source-map'
-		}))
+		.pipe(webpack(require('./webpack.config.js')))
 		.pipe(gulp.dest(folders.target.js));
 });
 
