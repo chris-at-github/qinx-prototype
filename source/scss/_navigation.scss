@@ -1,0 +1,28 @@
+.navigation {
+	a, .navigation--item {
+		display: block;
+		text-decoration: none;
+	}
+}
+
+.navigation-horizontal {
+	& > ul {
+		@include clearfix();
+	}
+
+	& > ul > li {
+		& {
+			float: left;
+		}
+	}
+
+	&.navigation-right {
+		& {
+			@include clearfix();
+		}
+
+		ul {
+			float: right;
+		}
+	}
+}

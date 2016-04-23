@@ -22,7 +22,7 @@
 	<div id="header">
 		<div class="row">
 			<div class="col-sm-10">
-				<nav class="navigation" id="navigation-main">
+				<nav class="navigation navigation-horizontal" id="navigation-main">
 					<ul class="clearfix">
 						<li <?php if($app->getActivePage() === \A4\Factory::get(A4\Helper\UriHelper::class)->get('world')) { ?>class="active"<?php } ?>>
 							<?php \A4\Factory::get(A4\Helper\LinkHelper::class)->render('world', 'World'); ?>
@@ -41,14 +41,21 @@
 			</div>
 
 			<div class="col-sm-4 col-sm-right">
-				<div class="dropdown" id="commander">
-					<div class="dropdown--trigger" data-toggle="dropdown">Commander</div>
-					<div class="dropdown--container">
-						<div class="placeholder">
-							<div class="placeholder--title">Commander</div>
-						</div>
-					</div>
-				</div>
+				<nav class="navigation navigation-horizontal navigation-right">
+					<ul>
+						<li class="dropdown" id="commander">
+							<div class="dropdown--trigger" data-toggle="dropdown">Commander</div>
+							<div class="dropdown--container">
+								<div class="placeholder">
+									<div class="placeholder--title">Commander</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="navigation--item">Settings</div>
+						</li>
+					</ul>
+				</nav>
 			</div>
 		</div>
 	</div>

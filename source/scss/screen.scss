@@ -5,6 +5,7 @@
 @import 'mixins';
 @import 'normalize';
 @import 'scaffolding';
+@import 'navigation';
 @import 'grid';
 @import 'form';
 @import 'bootstrap';
@@ -18,47 +19,46 @@ body {
 // ---------------------------------------------------------------------------------------------------------------------
 // Layout
 #header {
-	position: fixed;
-	top: 0;
-	left: 0; right: 0;
-	height: 45px;
-	padding: 0 10px;
-	background: $grey-darker;
-}
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Navigation Main
-#navigation-main {
-	li {
-		float: left;
+	& {
+		position: fixed;
+		top: 0;
+		left: 0; right: 0;
+		z-index: 100;
+		height: 45px;
+		padding: 0 10px;
+		background: $grey-darker;
 	}
 
-	li + li {
-		margin: 0 0 0 5px;
-	}
-
-	a {
-		& {
-			display: block;
-			line-height: 45px;
-			padding: 0 20px;
-			color: $grey-light;
-			text-transform: uppercase;
+	.navigation {
+		li + li {
+			margin: 0 0 0 5px;
 		}
 
-		&:hover {
-			background: $grey;
-		}
-	}
+		a, .navigation--item {
+			& {
+				display: block;
+				line-height: 45px;
+				padding: 0 20px;
+				color: $grey-light;
+				text-transform: uppercase;
+				cursor: pointer;
+			}
 
-	.active {
-		& > a {
-			background: $white;
-			color: $font-default-color;
-			font-weight: 600;
+			&:hover {
+				background: lighten($grey-darker, 5);
+			}
+		}
+
+		.active {
+			& > a, & > .navigation--item {
+				background: $white;
+				color: $font-default-color;
+				font-weight: 600;
+			}
 		}
 	}
 }
+
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Clearfix
@@ -148,4 +148,14 @@ body {
 	.placeholder {
 		min-height: 200px;
 	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Settings
+#settings--trigger {
+	display: inline-block;
+	line-height: 45px;
+	padding: 0 20px;
+	color: $grey-light;
+	text-transform: uppercase;
 }
