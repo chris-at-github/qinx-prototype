@@ -4,6 +4,31 @@ namespace A4;
 class Partial {
 
 	/**
+	 * Instance of current application
+	 *
+	 * @var \A4\Application $oApplication
+	 */
+	protected $oApplication;
+
+	/**
+	 * Setter for application
+	 *
+	 * @return \A4\Application
+	 */
+	public function getApplication() {
+		return $this->oApplication;
+	}
+
+	/**
+	 * Getter for application
+	 *
+	 * @param \A4\Application $oApplication
+	 */
+	public function setApplication(\A4\Application $oApplication) {
+		$this->oApplication = $oApplication;
+	}
+
+	/**
 	 * Render a partial file and output the result directly
 	 *
 	 * @param string $sPartial
@@ -25,7 +50,10 @@ class Partial {
 	 * @return string
 	 */
 	protected function getOutputBuffer($sPartial, $aVariables) {
+
+		// Set variables that can used directly in partials
 		extract($aVariables);
+		$app = $this->getApplication();
 
 		// Buffer the output, include target page
 		ob_start();

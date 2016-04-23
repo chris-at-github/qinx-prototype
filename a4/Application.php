@@ -17,6 +17,13 @@ class Application {
 	protected $sPageRenderer = \A4\Renderer\HtmlRenderer::class;
 
 	/**
+	 * Active page path
+	 *
+	 * @var string
+	 */
+	protected $sActivePage;
+
+	/**
 	 * Sets the page renderer
 	 *
 	 * @param Renderer\Renderer $sRenderer
@@ -28,6 +35,25 @@ class Application {
 	}
 
 	/**
+	 * Sets the active page path
+	 *
+	 * @param string $sPage
+	 * @return \A4\Application
+	 */
+	public function setActivePage($sPage) {
+		$this->sActivePage = $sPage;
+	}
+
+	/**
+	 * Returns the active page path
+	 *
+	 * @return string
+	 */
+	public function getActivePage() {
+		return $this->sActivePage;
+	}
+
+	/**
 	 * Execute the given page path against the page renderer
 	 *
 	 * @param string $sPage
@@ -35,6 +61,8 @@ class Application {
 	public function execute($sPage) {
 		$sPage = trim($sPage, '/');
 		$sRealPagepath = $this->getRealPagepath($sPage);
+
+		$this->setActivePage($sRealPagepath);
 
 		$sPageOutput = $this->getOutputBuffer($sRealPagepath);
 
@@ -51,6 +79,7 @@ class Application {
 	public function getOutputBuffer($sPage) {
 		$app 			= $this; // app is avialable in included page
 		$partial	= new \A4\Partial();
+		$partial->setApplication($this);
 
 		// Buffer the output, include target page
 		ob_start();
