@@ -11,13 +11,18 @@ var sourcemap 		= require('gulp-sourcemaps');
 var postcss 			= require('gulp-postcss');
 var autoprefixer 	= require('autoprefixer');
 
+// include js plugins
+var webpack	= require('webpack-stream');
+
 // paths for watching
 var folders = {
 	source: {
-		scss: ['./source/scss/*.scss']
+		scss: ['./source/scss/*.scss'],
+		js:		['./source/js/**/*.js']
 	},
 	target: {
-		css: './public/css/'
+		css: 	'./public/css/',
+		js:		'./public/js/'
 	}
 };
 
@@ -33,10 +38,23 @@ gulp.task('scss', function() {
 		.pipe(gulp.dest(folders.target.css));
 });
 
+gulp.task('webpack', function() {
+	return gulp.src('./source/js/a4.js')
+		.pipe(plumber())
+		.pipe(webpack({
+			output:  {
+				filename: 'a4.package.js',
+			},
+			devtool: 'source-map'
+		}))
+		.pipe(gulp.dest(folders.target.js));
+});
+
 // Rerun the task when a file changes
 gulp.task('watch', function() {
 	gulp.watch(folders.source.scss, ['scss']);
+	gulp.watch(folders.source.js, ['webpack']);
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['watch', 'scss']);
+gulp.task('default', ['watch', 'scss', 'webpack']);
