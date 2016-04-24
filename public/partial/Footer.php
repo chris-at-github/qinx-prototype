@@ -17,9 +17,12 @@
 	<div id="footer">
 		<div class="row">
 			<div class="col-sm-4 col-sm-right">
-				<div class="placeholder">
-					<div class="placeholder--title">Round</div>
+
+				<div class="turn clearfix">
+					<div class="turn--title">Turn: <strong>17</strong></div>
+					<div class="turn--action"><button class="button">Next turn</button></div>
 				</div>
+
 			</div>
 		</div>
 	</div>

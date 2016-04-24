@@ -60,15 +60,16 @@
 		padding: 7px 15px;
 		border: 0;
 		background: $grey-lighter;
-		font-weight: normal;
+		font-weight: 600;
 		color: $black;
 		line-height: 1;
+		text-transform: uppercase;
 		vertical-align: top;
 		cursor: pointer;
 	}
 
 	&:hover, &:focus, &:active {
-		background-color: darken($grey-lighter, 15%);
+		background-color: $grey;
 		color: $white;
 		text-decoration: none;
 	}
