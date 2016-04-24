@@ -133,7 +133,7 @@ body {
 		}
 
 		&:before {
-			content: '\EA01';
+			content: '\e900';
 			@include font-icon();
 			transition-duration: 0s;
 		}

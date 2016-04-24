@@ -45,33 +45,6 @@ gulp.task('webpack', function() {
 		.pipe(gulp.dest(folders.target.js));
 });
 
-// Create icon font.
-gulp.task('iconfont', function() {
-	var iconfont 		= require('gulp-iconfont');
-	var svgmin 			= require('gulp-svgmin');
-	var consolidate = require('gulp-consolidate');
-
-	return gulp.src(['./source/fonts/*.svg'])
-		.pipe(plumber())
-		.pipe(iconfont({
-			fontName: 'Icons',
-			prependUnicode: true,
-			normalize: true,
-			formats: ['ttf', 'eot', 'woff']
-		}))
-		.on('glyphs', function(codepoints, options) {
-			gulp.src('./source/fonts/_icons.scss')
-				.pipe(consolidate('lodash', {
-					glyphs: codepoints,
-					fontName: 'icons',
-					fontPath: '../fonts/',
-					className: 'icon'
-				}))
-				.pipe(gulp.dest('./source/scss/'))
-		})
-		.pipe(gulp.dest('./public/fonts/'));
-});
-
 // Rerun the task when a file changes
 gulp.task('watch', function() {
 	gulp.watch(folders.source.scss, ['scss']);
