@@ -14,10 +14,6 @@ var autoprefixer 	= require('autoprefixer');
 // include js plugins
 var webpack	= require('webpack-stream');
 
-var	iconfont = require('gulp-iconfont'),
-	svgmin = require('gulp-svgmin'),
-	consolidate = require('gulp-consolidate');
-
 // paths for watching
 var folders = {
 	source: {
@@ -51,7 +47,9 @@ gulp.task('webpack', function() {
 
 // Create icon font.
 gulp.task('iconfont', function() {
-	var runtime = Math.round(Date.now() / 1000);
+	var iconfont 		= require('gulp-iconfont');
+	var svgmin 			= require('gulp-svgmin');
+	var consolidate = require('gulp-consolidate');
 
 	return gulp.src(['./source/fonts/*.svg'])
 		.pipe(plumber())
