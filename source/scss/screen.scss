@@ -221,14 +221,36 @@ body {
 
 // ---------------------------------------------------------------------------------------------------------------------
 // World Map
-#world-map--container {
-	min-width: 350px;
-	height: 320px;
+.world-map--tiles {
+	margin: 0 -5px;
+	@include clearfix();
 }
 
 .world-map--tile {
-	width: 100px;
-	height: 100px;
+	& {
+		width: 130px;
+		height: 105px;
+		float: left;
+		margin: 5px;
+		padding: 5px;
+		background: $grey-lighter;
+	}
+
+	.world-map--tile-action {
+		& {
+			display: inline-block;
+			margin: 0 0 2px 0;
+			padding: 0 3px;
+			background: $grey;
+			line-height: 21px;
+			font-size: 11px;
+			color: $grey-light;
+		}
+
+		&:hover {
+			background: $color-brand;
+		}
+	}
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
