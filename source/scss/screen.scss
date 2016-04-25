@@ -120,6 +120,55 @@ body {
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Tabs
+.tabs {
+	.tabs--navigation {
+		ul {
+			@include clearfix();
+		}
+
+		li {
+			float: left;
+		}
+
+		li + li {
+			margin: 0 0 0 5px;
+		}
+
+		a {
+			& {
+				display: block;
+				line-height: 45px;
+				padding: 0 20px;
+				font-weight: 600;
+				color: $font-default-color;
+				text-transform: uppercase;
+				cursor: pointer;
+			}
+
+			&:hover {
+				background: lighten($grey-darker, 5);
+				color: $grey-light;
+			}
+		}
+
+		.active {
+			& > a, & > .navigation--item {
+				background: $white;
+				color: $font-default-color;
+			}
+		}
+	}
+
+	.tabs--content {
+		.tabs--item {
+			padding: 10px;
+			background: $white;
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Modal
 .modal {
 	& {
