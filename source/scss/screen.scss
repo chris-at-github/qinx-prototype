@@ -221,6 +221,14 @@ body {
 
 // ---------------------------------------------------------------------------------------------------------------------
 // World Map
+.world-map {
+	overflow: hidden;
+}
+
+.world-map--tile-container {
+	width: 5000px;
+}
+
 .world-map--tiles {
 	margin: 0 -5px;
 	@include clearfix();
