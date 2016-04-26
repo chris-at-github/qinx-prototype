@@ -21,7 +21,7 @@
 
 	<div id="header">
 		<div class="row">
-			<div class="col-sm-10">
+			<div class="col-sm-12">
 				<nav class="navigation navigation-horizontal" id="navigation-main">
 					<ul class="clearfix">
 						<li <?php if($app->getActivePage() === \A4\Factory::get(A4\Helper\UriHelper::class)->get('world')) { ?>class="active"<?php } ?>>
@@ -40,7 +40,7 @@
 				</nav>
 			</div>
 
-			<div class="col-sm-4 col-sm-right">
+			<div class="col-sm-6 col-sm-right">
 				<nav class="navigation navigation-horizontal navigation-right">
 					<ul>
 						<li class="dropdown" id="commander">

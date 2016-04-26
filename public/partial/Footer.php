@@ -16,7 +16,7 @@
 
 	<div id="footer">
 		<div class="row">
-			<div class="col-sm-4 col-sm-right">
+			<div class="col-sm-6 col-sm-right">
 
 				<div class="turn clearfix">
 					<div class="turn--title">Turn: <strong>17</strong></div>

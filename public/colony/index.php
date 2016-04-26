@@ -12,19 +12,19 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-8">
+			<div class="col-sm-12">
 
 				<div class="placeholder">
 					<div class="placeholder--title">Worker</div>
 				</div>
 
 			</div>
-			<div class="col-sm-8">
+			<div class="col-sm-12">
 
 				<header>Resources</header>
 
 				<div class="row">
-					<div class="col-sm-4">
+					<div class="col-sm-8">
 						<div class="resource">
 							<div class="resource--unit">789</div>
 							<div class="resource--header">
@@ -33,7 +33,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-8">
 						<div class="resource">
 							<div class="resource--unit">156</div>
 							<div class="resource--header">
@@ -42,7 +42,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-8">
 						<div class="resource">
 							<div class="resource--unit">341</div>
 							<div class="resource--header">
@@ -51,7 +51,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-8">
 						<div class="resource">
 							<div class="resource--unit">19</div>
 							<div class="resource--header">

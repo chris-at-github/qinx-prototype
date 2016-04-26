@@ -1,14 +1,14 @@
 <?php $partial->render('Header'); ?>
 
 <div class="row">
-	<div class="col-sm-10">
+	<div class="col-sm-16">
 		<div class="container">
 			<div class="container--header">World Map</div>
 
 			<?php $partial->render('WorldMap/Map'); ?>
 		</div>
 	</div>
-	<div class="col-sm-6">
+	<div class="col-sm-8">
 		<div class="container tabs">
 
 			<nav class="tabs--navigation">
