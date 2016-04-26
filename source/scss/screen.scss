@@ -262,6 +262,34 @@ body {
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Colony
+.colony--header {
+	margin: 0 0 10px 0;
+	padding: 0 0 5px 0;
+	border-bottom: 1px solid $grey-light;
+}
+
+.colony--pager {
+	& {
+		line-height: 30px;
+		font-size: 18px;
+	}
+
+	.colony--pager-previous, .colony--pager-next {
+		.icon {
+			display: inline-block;
+			width: 30px;
+			color: $grey-dark;
+		}
+
+		.icon:before {
+			position: relative;
+			top: 2px;
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Commander
 #commander {
 	.dropdown--trigger {
