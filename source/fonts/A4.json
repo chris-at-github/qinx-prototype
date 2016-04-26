@@ -1,58 +1,74 @@
 {
-	"metadata": {
-		"name": "A4",
-		"lastOpened": 1461483683275,
-		"created": 1461483586865
-	},
-	"iconSets": [
+	"selection": [
 		{
-			"selection": [
-				{
-					"order": 8,
-					"id": 0,
-					"prevSize": 32,
-					"code": 59648,
-					"name": "close",
-					"tempChar": ""
-				}
-			],
-			"id": 1,
-			"metadata": {
-				"name": "A4",
-				"importSize": {
-					"width": 24,
-					"height": 21
-				}
-			},
-			"height": 1024,
+			"order": 4,
 			"prevSize": 32,
-			"icons": [
-				{
-					"id": 0,
-					"paths": [
-						"M155.607 69.944l69.895-69.944 954.105 954.105-69.895 69.944z",
-						"M225.551 1024l-69.845-69.895 954.007-954.105 69.944 69.895z"
-					],
-					"attrs": [
-						{
-							"fill": "rgb(59, 171, 226)"
-						},
-						{
-							"fill": "rgb(59, 171, 226)"
-						}
-					],
-					"isMulticolor": false,
-					"width": 1180,
-					"grid": 0,
-					"tags": [
-						"close"
-					]
-				}
-			],
-			"invisible": false,
-			"colorThemes": []
+			"name": "chevron-left"
+		},
+		{
+			"order": 3,
+			"prevSize": 32,
+			"name": "chevron-right"
+		},
+		{
+			"order": 1,
+			"prevSize": 32,
+			"name": "close"
 		}
 	],
+	"metadata": {
+		"name": "A4",
+		"importSize": {
+			"width": 407,
+			"height": 407
+		},
+		"iconsHash": 737309997
+	},
+	"height": 1024,
+	"prevSize": 32,
+	"icons": [
+		{
+			"paths": [
+				"M793.867 53.226l-53.402-53.226-510.334 512 510.334 512 53.402-53.226-457.278-458.774z"
+			],
+			"grid": 0,
+			"tags": [
+				"chevron-left"
+			],
+			"defaultCode": 59649
+		},
+		{
+			"paths": [
+				"M283.533 0l-53.402 53.226 457.281 458.774-457.281 458.774 53.402 53.226 510.334-512z"
+			],
+			"grid": 0,
+			"tags": [
+				"chevron-right"
+			],
+			"defaultCode": 59650
+		},
+		{
+			"paths": [
+				"M155.607 69.944l69.895-69.944 954.105 954.105-69.895 69.944z",
+				"M225.551 1024l-69.845-69.895 954.007-954.105 69.944 69.895z"
+			],
+			"attrs": [
+				{
+					"fill": "rgb(59, 171, 226)"
+				},
+				{
+					"fill": "rgb(59, 171, 226)"
+				}
+			],
+			"width": 1180,
+			"grid": 0,
+			"tags": [
+				"close"
+			],
+			"defaultCode": 59648
+		}
+	],
+	"colorThemes": [],
 	"preferences": {
 		"showGlyphs": true,
 		"showQuickUse": true,
@@ -95,5 +111,5 @@
 		"showCodes": true,
 		"gridSize": 16
 	},
-	"uid": -1
+	"IcoMoonType": "icon-set"
 }
