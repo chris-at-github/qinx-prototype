@@ -20,11 +20,14 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-
-.icon.icon-close:before,
-.icon-l.icon-close:before {
-	content: "\e900";
+.icon-chevron-left:before {
+	content: "\e901";
 }
-.icon-r.icon-close:after {
+
+.icon-chevron-right:before {
+	content: "\e902";
+}
+
+.icon-close:before {
 	content: "\e900";
 }
