@@ -20,6 +20,9 @@ class LinkHelper extends HtmlHelper implements HelperInterface {
 	 */
 	public function render($sTarget, $sContent = null, $aAttributes = []) {
 
+		// Add attributes to link
+		$this->setAttributes($aAttributes);
+
 		// Set the link target
 		$this->setAttribute('href', \A4\Factory::get(\A4\Helper\UriHelper::class)->get($sTarget));
 

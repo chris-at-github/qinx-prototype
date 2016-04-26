@@ -31,6 +31,9 @@ class HtmlHelper extends Helper implements HelperInterface {
 	 * @return \A4\Helper\HtmlHelper
 	 */
 	public function setAttributes($aAttributes) {
+		foreach($aAttributes as $sName => $sValue) {
+			$this->setAttribute($sName, $sValue);
+		}
 	}
 
 	/**
