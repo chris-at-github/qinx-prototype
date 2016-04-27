@@ -70,11 +70,13 @@
 		</div>
 
 		<div class="container">
-			<header class="container--header">Colony</header>
+			<?php
 
-			<div class="placeholder">
-				<div class="placeholder--title">Buildings</div>
-			</div>
+				\A4\Factory::get(\A4\Map\Map::class)
+					->setSize(3, 4)
+					->render();
+
+			?>
 		</div>
 	</div>
 
