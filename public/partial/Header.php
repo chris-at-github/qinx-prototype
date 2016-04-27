@@ -19,7 +19,7 @@
 </head>
 <body>
 
-	<div id="header">
+	<div class="page--header">
 		<div class="row">
 			<div class="col-sm-12">
 				<nav class="navigation navigation-horizontal" id="navigation-main">
@@ -52,7 +52,7 @@
 							</div>
 						</li>
 						<li>
-							<div class="navigation--item" data-remodal-target="setting">Setting</div>
+							<div class="navigation--item" data-remodal-target="setting">Settings</div>
 						</li>
 					</ul>
 				</nav>

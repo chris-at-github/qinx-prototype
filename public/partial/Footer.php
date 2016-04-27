@@ -1,7 +1,7 @@
 	<div class="remodal modal modal-large" data-remodal-id="setting">
 		<div class="modal--header">
 			<button data-remodal-action="close" class="modal--close"></button>
-			<header class="modal--title">Setting</header>
+			<header class="modal--title">Settings</header>
 		</div>
 		<div class="modal--body">
 			<div class="placeholder">
@@ -14,7 +14,7 @@
 		</div>
 	</div>
 
-	<div id="footer">
+	<div class="page--footer">
 		<div class="row">
 			<div class="col-sm-6 col-sm-right">
 

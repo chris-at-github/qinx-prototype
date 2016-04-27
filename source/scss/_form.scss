@@ -6,7 +6,7 @@
 		width: 100%;
 		padding: 1px 3px;
 		line-height: 20px;
-		border: 1px solid $grey-lighter;
+		border: 1px solid $grey-light;
 	}
 
 	&:focus {
@@ -15,7 +15,7 @@
 	}
 
 	&.disabled {
-		background: $grey-lighter;
+		background: $grey-light;
 	}
 }
 
@@ -59,7 +59,7 @@
 		margin: 0;
 		padding: 7px 15px;
 		border: 0;
-		background: $grey-lighter;
+		background: $grey-light;
 		font-weight: 600;
 		color: $black;
 		line-height: 1;
