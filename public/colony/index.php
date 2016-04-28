@@ -81,6 +81,7 @@
 
 						\A4\Factory::get(\A4\Map\Map::class)
 							->setSize(12, 5)
+							->initializeTiles()
 							->render();
 
 					?>
