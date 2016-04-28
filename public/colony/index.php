@@ -69,14 +69,23 @@
 			</div>
 		</div>
 
-		<div class="container">
-			<?php
+		<hr>
 
-				\A4\Factory::get(\A4\Map\Map::class)
-					->setSize(3, 4)
-					->render();
+		<div class="row">
+			<div class="col-sm-12">
 
-			?>
+				<div class="container">
+					<header class="container--header">Buildings</header>
+
+					<?php
+
+						\A4\Factory::get(\A4\Map\Map::class)
+							->setSize(12, 5)
+							->render();
+
+					?>
+				</div>
+			</div>
 		</div>
 	</div>
 
