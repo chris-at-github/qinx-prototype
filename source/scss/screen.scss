@@ -311,6 +311,21 @@ body {
 		margin: 1px;
 		background: $grey-light;
 	}
+
+	&:hover {
+		.map--tile-create {
+			display: block
+		}
+	}
+
+	.map--tile-object, .map--tile-object-create {
+		height: 100%;
+		background: $grey;
+	}
+
+	.map--tile-create {
+		display: none;
+	}
 }
 
 // ---------------------------------------------------------------------------------------------------------------------

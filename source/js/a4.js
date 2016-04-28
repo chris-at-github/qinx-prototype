@@ -2,8 +2,9 @@ require('./vendor/bootstrap/dropdown.js');
 require('./vendor/bootstrap/tabs.js');
 require('./vendor/vodkabears/remodal.js');
 
-$(function() {
+require('./maps.js');
 
+$(function() {
 
 	// -------------------------------------------------------------------------------------------------------------------
 	// Tabs
