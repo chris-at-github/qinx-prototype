@@ -287,6 +287,33 @@ body {
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Maps
+.map {
+	overflow: hidden;
+}
+
+.map--tiles-container {
+	width: 5000px;
+	margin: -1px 0;
+}
+
+.map--tiles {
+	margin: 0 -1px;
+	@include clearfix();
+}
+
+.map--tile {
+	& {
+		position: relative;
+		width: 55px;
+		height: 55px;
+		float: left;
+		margin: 1px;
+		background: $grey-light;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
 // World Map
 .world-map {
 	margin: -5px 0;
