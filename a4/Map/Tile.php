@@ -26,6 +26,13 @@ class Tile {
 	protected $sUuid;
 
 	/**
+	 * Objects assigned to one tile
+	 *
+	 * @var array
+	 */
+	protected $aObjects = [];
+
+	/**
 	 * @return mixed
 	 */
 	public function getUuid() {
@@ -76,6 +83,39 @@ class Tile {
 	public function setY($y) {
 		$this->y = $y;
 		return $this;
+	}
+
+	/**
+	 * Return the array of tile objects
+	 *
+	 * @return array
+	 */
+	public function getObjects() {
+		return $this->aObjects;
+	}
+
+	/**
+	 * Set the array of tile objects
+	 *
+	 * @param array $aObjects
+	 */
+	public function setObjects($aObjects) {
+		$this->aObjects = $aObjects;
+	}
+
+	/**
+	 * Add a tile object
+	 *
+	 * @param \A4\Map\TileObject $oObject
+	 */
+	public function addObject(\A4\Map\TileObject $oObject) {
+
+		// Generate a new Uuid and add that to the object
+		$sUuid = md5($this->getUuid() . ':' . md5($oObject->getNamespace()));
+		$oObject->setUuid($sUuid);
+
+		// Add the new object to collection
+		$this->aObjects[$sUuid] = $oObject;
 	}
 
 	/**
