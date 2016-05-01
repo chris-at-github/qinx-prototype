@@ -79,4 +79,16 @@ class TileObject {
 		$this->sUuid = $sUuid;
 		return $this;
 	}
+
+	/**
+	 * Render a tile object
+	 *
+	 * @return void
+	 */
+	public function toHtml() {
+		return '<div class="map--tile-object object" data-uuid="' . $this->getUuid() . '">
+			<div class="object--name">' . $this->getName() . '</div>
+			<div class="object--namespace">' . $this->getNamespace() . '</div>
+		</div>';
+	}
 }

@@ -79,11 +79,18 @@
 
 					<?php
 
-						\A4\Factory::get(\A4\Map\Map::class)
+						/* @var \A4\Map\Map $oMap */
+						$oMap = \A4\Factory::get(\A4\Map\Map::class)
 							->setSize(12, 5)
-							->initializeTiles()
-							->render();
+							->initializeTiles();
 
+						/* @var \A4\Map\TileObject $oTileObject */
+						$oTileObject = \A4\Factory::get(\A4\Map\TileObject::class)
+							->setName('EntryBuilding')
+							->setNamespace('\A4\Building\EntryBuilding');
+						$oMap->getTile('617abeba7b98ba3ddb992d1cfea91617')->addObject($oTileObject);
+
+						$oMap->render();
 					?>
 				</div>
 			</div>

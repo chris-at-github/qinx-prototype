@@ -104,6 +104,19 @@ class Tile {
 	}
 
 	/**
+	 * Check if a tile has tile objects
+	 *
+	 * @return boolean
+	 */
+	public function hasObject() {
+		if(empty($this->aObjects) === false) {
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
 	 * Add a tile object
 	 *
 	 * @param \A4\Map\TileObject $oObject
@@ -124,6 +137,15 @@ class Tile {
 	 * @return void
 	 */
 	public function toHtml() {
-		return '<div class="map--tile" data-uuid="'. $this->getUuid() . '" data-x="' . $this->getX() . '" data-y="' . $this->getY() . '"></div>';
+		$aHtml[] = '<div class="map--tile" data-uuid="' . $this->getUuid() . '" data-x="' . $this->getX() . '" data-y="' . $this->getY() . '">';
+
+		/* @var \A4\Map\TileObject $oObject */
+		foreach($this->getObjects() as $oObject) {
+			$aHtml[] = $oObject->toHtml();
+		}
+
+		$aHtml[] = '</div>';
+
+		return implode(null, $aHtml);
 	}
 }

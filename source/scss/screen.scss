@@ -305,8 +305,8 @@ body {
 .map--tile {
 	& {
 		position: relative;
-		width: 55px;
-		height: 55px;
+		width: 82px;
+		height: 60px;
 		float: left;
 		margin: 1px;
 		background: $grey-light;
@@ -325,6 +325,29 @@ body {
 
 	.map--tile-create {
 		display: none;
+	}
+
+	.object {
+		& {
+			padding: 3px 5px;
+		}
+
+		.object--name, .object--namespace {
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			line-height: 1.2;
+		}
+
+		.object--name {
+			font-size: 11px;
+			color: $grey-light;
+		}
+
+		.object--namespace {
+			font-size: 10px;
+			color: lighten($grey, 35%);
+		}
 	}
 }
 
