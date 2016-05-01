@@ -14,6 +14,8 @@
 		</div>
 	</div>
 
+	<?php $partial->render('Building/EntryBuilding'); ?>
+
 	<div class="page--footer">
 		<div class="row">
 			<div class="col-sm-6 col-sm-right">

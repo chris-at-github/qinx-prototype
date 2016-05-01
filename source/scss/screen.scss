@@ -184,6 +184,47 @@ body {
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Objekt Properties
+.object--properties {
+	margin: 0 -3px;
+	@include clearfix();
+}
+.object--property {
+	& {
+		float: left;
+		margin: 3px;
+		font-size: 13px;
+	}
+
+	.object--property-value {
+		& {
+			width: 35px;
+			line-height: 25px;
+			float: left;
+			border: 2px solid darken($grey-light, 5%);
+			background: $white;
+			font-weight: 600;
+			text-align: center;
+		}
+
+		&.object--property-value-plus {
+			color: $green;
+		}
+
+		&.object--property-value-minus {
+			color: $red;
+		}
+	}
+
+	.object--property-title {
+		margin: 0 0 0 35px;
+		padding: 0 5px;
+		line-height: 29px;
+		background: $grey-light;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Tabs
 .tabs {
 	.tabs--navigation {
@@ -235,6 +276,29 @@ body {
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Breadcrumb
+.breadcrumb {
+	li {
+		& {
+			float: left;
+		}
+
+		& + li {
+			& {
+				margin: 0 0 0 10px;
+			}
+
+			&:before {
+				content: '/';
+				position: static;
+				display: inline-block;
+				margin: 0 10px 0 0;
+			}
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Modal
 .modal {
 	& {
@@ -243,19 +307,23 @@ body {
 	}
 
 	&.modal-large {
-		max-width: 800px;
+		max-width: 980px;
+	}
+
+	&.modal-medium {
+		max-width: 640px;
 	}
 
 	.modal--close {
 		& {
 			position: absolute;
 			top: 0; right: 0;
-			width: 45px;
-			height: 45px;
-			line-height: 45px;
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
 			border: 0;
 			background: transparent;
-			color: $grey;
+			color: tint($color-brand-light, 50%);
 		}
 
 		&:before {
@@ -265,24 +333,70 @@ body {
 		}
 
 		&:hover {
-			color: $grey-dark;
+			background: $color-brand-dark;
+			color: $white;
 		}
 	}
 
 	.modal--header {
-		min-height: 75px;
-		padding: 10px 20px;
-		border-bottom: 1px solid darken($grey-light, 5%);
-		background: $grey-light;
+		min-height: 60px;
+		padding: 0 10px;
+		line-height: 60px;
+		background: $color-brand;
 	}
 
-	.modal--title {
-		margin: 25px 0 0 0;
-		font-size: 24px;
+	.modal--breadcrumb {
+		li {
+			& {
+				color: tint($color-brand-light, 50%);
+			}
+
+			&:last-child span {
+				font-weight: 600;
+				color: $white;
+			}
+
+			a {
+				color: tint($color-brand-light, 50%);
+			}
+
+			a:hover, a:focus {
+				color: $white;
+			}
+		}
 	}
 
 	.modal--body {
-		padding: 10px;
+		& {
+			padding: 10px;
+		}
+
+		& + .modal--body {
+			border-top: 1px solid $grey-light;
+		}
+
+		&.modal--body-grey {
+			& {
+				background: $grey-light;
+			}
+
+			& + .modal--body {
+				border-top: 2px solid darken($grey-light, 5%);
+			}
+		}
+	}
+}
+
+.object-modal {
+	.object--placeholder {
+		min-height: 180px;
+	}
+
+	.object--title {
+		margin: 0 0 25px 0;
+		font-size: 23px;
+		font-weight: 300;
+		line-height: 1.1;
 	}
 }
 

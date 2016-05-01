@@ -53,7 +53,8 @@ class Partial {
 
 		// Set variables that can used directly in partials
 		extract($aVariables);
-		$app = $this->getApplication();
+		$partial	= $this;
+		$app 			= $this->getApplication();
 
 		// Buffer the output, include target page
 		ob_start();
