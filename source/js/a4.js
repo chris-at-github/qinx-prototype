@@ -26,6 +26,9 @@ $(function() {
 
 	// Open dummy modal
 	var oBuildingModal = $('[data-remodal-id=c64569bf41d4b7d7e675ba16df104321]').remodal();
-			oBuildingModal.open();
+
+	if(oBuildingModal !== undefined) {
+		oBuildingModal.open();
+	}
 
 });
