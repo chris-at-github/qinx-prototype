@@ -19,43 +19,47 @@
 </head>
 <body>
 
-	<div class="page--header">
-		<div class="row">
-			<div class="col-sm-12">
-				<nav class="navigation navigation-horizontal" id="navigation-main">
-					<ul class="clearfix">
-						<li <?php if($app->getActivePage() === \A4\Factory::get(A4\Helper\UriHelper::class)->get('world')) { ?>class="active"<?php } ?>>
-							<?php \A4\Factory::get(A4\Helper\LinkHelper::class)->render('world', 'World'); ?>
-						</li>
-						<li <?php if($app->getActivePage() === \A4\Factory::get(A4\Helper\UriHelper::class)->get('colony')) { ?>class="active"<?php } ?>>
-							<?php \A4\Factory::get(A4\Helper\LinkHelper::class)->render('colony', 'Colony'); ?>
-						</li>
-						<li <?php if($app->getActivePage() === \A4\Factory::get(A4\Helper\UriHelper::class)->get('research')) { ?>class="active"<?php } ?>>
-							<?php \A4\Factory::get(A4\Helper\LinkHelper::class)->render('research', 'Research'); ?>
-						</li>
-						<li <?php if($app->getActivePage() === \A4\Factory::get(A4\Helper\UriHelper::class)->get('diplomacy')) { ?>class="active"<?php } ?>>
-							<?php \A4\Factory::get(A4\Helper\LinkHelper::class)->render('diplomacy', 'Diplomacy'); ?>
-						</li>
-					</ul>
-				</nav>
-			</div>
+	<?php if(isset($bDisplayHeader) === false || $bDisplayHeader === true) { ?>
 
-			<div class="col-sm-6 col-sm-right">
-				<nav class="navigation navigation-horizontal navigation-right">
-					<ul>
-						<li class="dropdown" id="commander">
-							<div class="dropdown--trigger" data-toggle="dropdown">Commander</div>
-							<div class="dropdown--container">
-								<div class="placeholder">
-									<div class="placeholder--title">Commander</div>
+		<div class="page--header">
+			<div class="row">
+				<div class="col-sm-12">
+					<nav class="navigation navigation-horizontal" id="navigation-main">
+						<ul class="clearfix">
+							<li <?php if($app->getActivePage() === \A4\Factory::get(A4\Helper\UriHelper::class)->get('world')) { ?>class="active"<?php } ?>>
+								<?php \A4\Factory::get(A4\Helper\LinkHelper::class)->render('world', 'World'); ?>
+							</li>
+							<li <?php if($app->getActivePage() === \A4\Factory::get(A4\Helper\UriHelper::class)->get('colony')) { ?>class="active"<?php } ?>>
+								<?php \A4\Factory::get(A4\Helper\LinkHelper::class)->render('colony', 'Colony'); ?>
+							</li>
+							<li <?php if($app->getActivePage() === \A4\Factory::get(A4\Helper\UriHelper::class)->get('research')) { ?>class="active"<?php } ?>>
+								<?php \A4\Factory::get(A4\Helper\LinkHelper::class)->render('research', 'Research'); ?>
+							</li>
+							<li <?php if($app->getActivePage() === \A4\Factory::get(A4\Helper\UriHelper::class)->get('diplomacy')) { ?>class="active"<?php } ?>>
+								<?php \A4\Factory::get(A4\Helper\LinkHelper::class)->render('diplomacy', 'Diplomacy'); ?>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="col-sm-6 col-sm-right">
+					<nav class="navigation navigation-horizontal navigation-right">
+						<ul>
+							<li class="dropdown" id="commander">
+								<div class="dropdown--trigger" data-toggle="dropdown">Commander</div>
+								<div class="dropdown--container">
+									<div class="placeholder">
+										<div class="placeholder--title">Commander</div>
+									</div>
 								</div>
-							</div>
-						</li>
-						<li>
-							<div class="navigation--item" data-remodal-target="setting">Settings</div>
-						</li>
-					</ul>
-				</nav>
+							</li>
+							<li>
+								<div class="navigation--item" data-remodal-target="setting">Settings</div>
+							</li>
+						</ul>
+					</nav>
+				</div>
 			</div>
 		</div>
-	</div>
+
+	<?php } ?>
