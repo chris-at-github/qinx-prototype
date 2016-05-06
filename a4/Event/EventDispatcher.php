@@ -6,32 +6,32 @@ class EventDispatcher {
 	/**
 	 * List of event types
 	 *
-	 * @var array $aTypes
+	 * @var array $aEvents
 	 */
-	protected $aTypes = [];
+	protected $aEvents = [];
 
 	/**
 	 * @return array
 	 */
-	public function getTypes() {
-		return $this->aTypes;
+	public function getEvents() {
+		return $this->aEvents;
 	}
 
 	/**
-	 * @param array $aTypes
+	 * @param array $aEvents
 	 * @return \A4\Event\EventDispatcher
 	 */
-	public function setTypes($aTypes) {
-		$this->aTypes = $aTypes;
+	public function setTypes($aEvents) {
+		$this->aEvents = $aEvents;
 		return $this;
 	}
 
 	/**
-	 * @param array $oEventType
+	 * @param array $oEvent
 	 * @return \A4\Event\EventDispatcher
 	 */
-	public function addType($oEventType) {
-		$this->aTypes[] = $oEventType;
+	public function addEvent($oEvent) {
+		$this->aEvents[] = $oEvent;
 		return $this;
 	}
 }

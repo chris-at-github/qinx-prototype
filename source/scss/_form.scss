@@ -4,8 +4,6 @@
 	& {
 		position: relative;
 		width: 100%;
-		padding: 1px 3px;
-		line-height: 20px;
 		border: 1px solid $grey-light;
 	}
 
@@ -19,7 +17,7 @@
 	}
 }
 
-.form-item {
+.form-item + .form-item {
 	margin: 10px 0 0 0;
 }
 
@@ -60,10 +58,8 @@
 		padding: 7px 15px;
 		border: 0;
 		background: $grey-light;
-		font-weight: 600;
 		color: $black;
 		line-height: 1;
-		text-transform: uppercase;
 		vertical-align: top;
 		cursor: pointer;
 	}

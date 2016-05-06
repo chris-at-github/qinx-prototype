@@ -98,9 +98,34 @@ body {
 	@include clearfix();
 }
 
+// ----------------------------------------------------------------------------------
+// Forms
+.form-field {
+	min-height: 28px;
+	padding: 0 3px;
+	line-height: 28px;
+}
+
+.form-label {
+	margin: 0 0 3px 0;
+	font-size: 13px;
+	color: lighten($grey, 10%);
+}
+
+.button {
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
 // ---------------------------------------------------------------------------------------------------------------------
 // Container
 .container {
+	& {
+		padding: 10px;
+		border: 1px solid darken($grey-light, 5%);
+		background: $white;
+	}
+
 	& + .container {
 		margin: 10px 0 0 0;
 	}
