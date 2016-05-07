@@ -1,7 +1,7 @@
 <?php
-namespace A4\Helper;
+namespace A4\ViewHelper;
 
-class HtmlHelper extends Helper implements HelperInterface {
+class HtmlViewHelper extends ViewHelper implements ViewHelperInterface {
 
 	/**
 	 * tag name
@@ -28,7 +28,7 @@ class HtmlHelper extends Helper implements HelperInterface {
 	 * Set attributes list
 	 *
 	 * @param array $aAttributes
-	 * @return \A4\Helper\HtmlHelper
+	 * @return \A4\ViewHelper\HtmlViewHelper
 	 */
 	public function setAttributes($aAttributes) {
 		foreach($aAttributes as $sName => $sValue) {
@@ -41,7 +41,7 @@ class HtmlHelper extends Helper implements HelperInterface {
 	 *
 	 * @param string $sName
 	 * @param string $sValue
-	 * @return \A4\Helper\HtmlHelper
+	 * @return \A4\ViewHelper\HtmlViewHelper
 	 */
 	public function setAttribute($sName, $sValue) {
 		$this->aAttributes[trim($sName)] = trim($sValue);
@@ -76,7 +76,7 @@ class HtmlHelper extends Helper implements HelperInterface {
 	 * Set content
 	 *
 	 * @param string $sContent
-	 * @return \A4\Helper\HtmlHelper
+	 * @return \A4\ViewHelper\HtmlViewHelper
 	 */
 	public function setContent($sContent) {
 		$this->sContent = $sContent;

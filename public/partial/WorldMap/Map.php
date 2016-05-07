@@ -6,7 +6,7 @@
 					<div class="world-map--tile">
 
 						<?php if($y === 2 && $x === 3) { ?>
-							<?php \A4\Factory::get(\A4\Helper\LinkHelper::class)->render('colony', 'Colony #01', ['class' => 'world-map--tile-action']) ?>
+							<?php \A4\Factory::get(\A4\ViewHelper\LinkViewHelper::class)->render('colony', 'Colony #01', ['class' => 'world-map--tile-action']) ?>
 						<?php } ?>
 
 					</div>

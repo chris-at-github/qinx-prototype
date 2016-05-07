@@ -1,7 +1,7 @@
 <?php
-namespace A4\Helper;
+namespace A4\ViewHelper;
 
-class LinkHelper extends HtmlHelper implements HelperInterface {
+class LinkViewHelper extends HtmlViewHelper implements ViewHelperInterface {
 
 	/**
 	 * tag name

@@ -27,16 +27,16 @@
 					<nav class="navigation navigation-horizontal" id="navigation-main">
 						<ul class="clearfix">
 							<li <?php if($app->getActivePage() === \A4\Factory::get(A4\Helper\UriHelper::class)->get('world')) { ?>class="active"<?php } ?>>
-								<?php \A4\Factory::get(A4\Helper\LinkHelper::class)->render('world', 'World'); ?>
+								<?php \A4\Factory::get(A4\ViewHelper\LinkViewHelper::class)->render('world', 'World'); ?>
 							</li>
 							<li <?php if($app->getActivePage() === \A4\Factory::get(A4\Helper\UriHelper::class)->get('colony')) { ?>class="active"<?php } ?>>
-								<?php \A4\Factory::get(A4\Helper\LinkHelper::class)->render('colony', 'Colony'); ?>
+								<?php \A4\Factory::get(A4\ViewHelper\LinkViewHelper::class)->render('colony', 'Colony'); ?>
 							</li>
 							<li <?php if($app->getActivePage() === \A4\Factory::get(A4\Helper\UriHelper::class)->get('research')) { ?>class="active"<?php } ?>>
-								<?php \A4\Factory::get(A4\Helper\LinkHelper::class)->render('research', 'Research'); ?>
+								<?php \A4\Factory::get(A4\ViewHelper\LinkViewHelper::class)->render('research', 'Research'); ?>
 							</li>
 							<li <?php if($app->getActivePage() === \A4\Factory::get(A4\Helper\UriHelper::class)->get('diplomacy')) { ?>class="active"<?php } ?>>
-								<?php \A4\Factory::get(A4\Helper\LinkHelper::class)->render('diplomacy', 'Diplomacy'); ?>
+								<?php \A4\Factory::get(A4\ViewHelper\LinkViewHelper::class)->render('diplomacy', 'Diplomacy'); ?>
 							</li>
 						</ul>
 					</nav>
