@@ -17,13 +17,19 @@
 					<form action="<?php \A4\Factory::get(A4\Helper\UriHelper::class)->get('event'); ?>" method="get">
 
 						<div class="form-item">
-							<label class="form-label" for="event">Events</label>
-							<select class="form-field" id="event" name="event">
-								<option value="">-</option>
-								<?php foreach($oEventDispatcher->getEvents() as $sEvent) { ?>
-									<option value="<?php echo $sEvent; ?>"><?php echo \A4\Helper\ClassHelper::toString($sEvent); ?> [<?php echo $sEvent; ?>]</option>
-								<?php } ?>
-							</select>
+							<label class="form-label" for="event">Event</label>
+							<?php
+								\A4\Factory::get(\A4\ViewHelper\SelectViewHelper::class)->render(
+									'event',
+									$oEventDispatcher->getEvents(),
+									\A4\Factory::get(\A4\Request::class)->get('event'),
+									['class' => 'form-field', 'id' => 'event'],
+									function($sKey, $sValue) {
+										return [$sValue, \A4\Helper\ObjectHelper::toString($sValue) . ' [' . $sValue . ']'];
+									},
+									['' => '-']
+								);
+							?>
 						</div>
 
 						<div class="form-actions">

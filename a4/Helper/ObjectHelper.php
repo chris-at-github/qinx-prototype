@@ -1,7 +1,7 @@
 <?php
 namespace A4\Helper;
 
-class ClassHelper extends Helper implements HelperInterface {
+class ObjectHelper extends Helper implements HelperInterface {
 
 	/**
 	 * Returns the class name without namespace
