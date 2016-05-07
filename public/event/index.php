@@ -33,7 +33,7 @@
 						</div>
 
 						<div class="form-actions">
-							<button class="button button-submit" name="fire">Fire</button>
+							<button class="button button-submit" name="action" value="fire">Fire</button>
 						</div>
 
 					</form>

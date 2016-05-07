@@ -9,5 +9,5 @@
     # Handle Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_URI} !^(.*).(css|js|ico)$
-    RewriteRule ^(.*)$ /a4.php?page=$1 [L]
+    RewriteRule ^(.*)$ /a4.php?page=$1 [QSA]
 </IfModule>
