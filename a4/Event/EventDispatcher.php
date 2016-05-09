@@ -11,6 +11,16 @@ class EventDispatcher {
 	protected $aEvents = [];
 
 	/**
+	 * Generate a key for an event name
+	 *
+	 * @param string $sEvent
+	 * @return string
+	 */
+	public function getEventIdentifier($sEvent) {
+		return md5($sEvent);
+	}
+
+	/**
 	 * @return array
 	 */
 	public function getEvents() {
@@ -27,11 +37,21 @@ class EventDispatcher {
 	}
 
 	/**
-	 * @param array $oEvent
+	 * @param string $sEvent
 	 * @return \A4\Event\EventDispatcher
 	 */
-	public function addEvent($oEvent) {
-		$this->aEvents[] = $oEvent;
+	public function addEvent($sEvent) {
+		$this->aEvents[] = $sEvent;
 		return $this;
+	}
+
+	/**
+	 * Execute a event
+	 *
+	 * @param $sEvent
+	 * @param array $aArguments
+	 */
+	public function fire($sEvent, $aArguments = []) {
+
 	}
 }
