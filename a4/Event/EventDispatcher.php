@@ -11,13 +11,20 @@ class EventDispatcher {
 	protected $aEvents = [];
 
 	/**
+	 * List of objects for each event
+	 *
+	 * @var array $aObjects
+	 */
+	protected $aObjects = [];
+
+	/**
 	 * Generate a key for an event name
 	 *
 	 * @param string $sEvent
 	 * @return string
 	 */
 	public function getEventIdentifier($sEvent) {
-		return md5($sEvent);
+		return md5(trim($sEvent, '\\ '));
 	}
 
 	/**
@@ -41,7 +48,7 @@ class EventDispatcher {
 	 * @return \A4\Event\EventDispatcher
 	 */
 	public function addEvent($sEvent) {
-		$this->aEvents[] = $sEvent;
+		$this->aEvents[$this->getEventIdentifier($sEvent)] = $sEvent;
 		return $this;
 	}
 
@@ -52,6 +59,11 @@ class EventDispatcher {
 	 * @param array $aArguments
 	 */
 	public function fire($sEvent, $aArguments = []) {
+		$sEventIdentifier = $this->getEventIdentifier($sEvent);
 
+		// Event type exists and objects registered for this event
+		if(isset($this->aEvents[$sEventIdentifier]) === true && empty($this->aObjects[$sEventIdentifier]) === false) {
+			\A4\Factory::get($this->aEvents[$sEventIdentifier])->handle($this->aObjects[$sEventIdentifier], $aArguments);
+		}
 	}
 }

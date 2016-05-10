@@ -6,8 +6,8 @@
 		->addEvent(\A4\Event\BeforeTurnEvent::class)
 		->addEvent(\A4\Event\AfterTurnEvent::class);
 
-	if(\A4\Factory::get(\A4\Request::class)->get('event') === 'fire') {
-
+	if(\A4\Factory::get(\A4\Request::class)->get('action') === 'fire') {
+		$oEventDispatcher->fire(\A4\Factory::get(\A4\Request::class)->get('event'));
 	}
 
 ?>
